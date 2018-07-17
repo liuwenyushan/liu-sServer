@@ -9,7 +9,7 @@ import com.doit.liu.server.Context.Context;
 import com.doit.liu.server.Context.HttpContext;
 import com.doit.liu.server.Mapping.UriMap;
 
-public class HttpHandler implements Runnable {
+public class HttpHandler {
 
 	private String requestHeader;
 	private SelectionKey key;
