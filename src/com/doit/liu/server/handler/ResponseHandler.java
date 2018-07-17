@@ -61,6 +61,7 @@ public class ResponseHandler {
 		if (reader != null) {
 			sb.append("Content-Length:" + html.getBytes().length + "\r\n");
 		}
+		// ÏìÓ¦ÕıÎÄ
 		sb.append("\r\n");
 		sb.append(html);
 
