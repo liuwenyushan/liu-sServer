@@ -72,8 +72,13 @@ public class liusServer implements Runnable {
 							logger.info("该请求头格式为：\r\n" + requestHeader);
 							logger.info("启动子线程对请求进行处理--------");
 							// 启动子线程对请求进行处理
-							new Thread(new HttpHandler(requestHeader, key))
-									.start();
+							/*
+							 * new Thread(new HttpHandler(requestHeader, key))
+							 * .start();
+							 */
+							HttpHandler httpHandler = new HttpHandler(
+									requestHeader, key);
+							httpHandler.run();
 						}
 					} else if (key.isWritable()) {
 						// 对已输出的channel进行关闭，否则channel将会阻塞
